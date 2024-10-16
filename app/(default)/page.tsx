@@ -1,7 +1,8 @@
-export const metadata = {
-  title: "Home - Simple",
-  description: "Page description",
-};
+"use client";
+// export const metadata = {
+//   title: "Home - Simple",
+//   description: "Page description",
+// };
 
 import Hero from "@/components/hero-home";
 import BusinessCategories from "@/components/business-categories";
@@ -14,9 +15,9 @@ export default function Home() {
     <>
       <Hero />
       <BusinessCategories />
-      <FeaturesPlanet />
+      {/* <FeaturesPlanet /> */}
       <LargeTestimonial />
-      <Cta />
+      {/* <Cta /> */}
     </>
   );
 }
