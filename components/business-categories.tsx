@@ -1,55 +1,51 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Laptop, Smartphone, Cloud, Lock, Zap, HeadphonesIcon } from "lucide-react"
-
-const features = [
-  {
-    title: "Search for seminal papers",
-    description: "Quickly discover seminal papers in your field, seamlessly integrated with Semantic Scholar to provide you with the most impactful research at your fingertips.",
-    icon: Laptop,
-    color: "bg-blue-500",
-  },
-  {
-    title: "Integrated editor as you read",
-    description: "Dot down questions, annotations and notes using our built-in editor, enhancing your quality of research and creating meaningful analysis of research articles",
-    icon: Smartphone,
-    color: "bg-green-500",
-  },
-  {
-    title: "Smart assistant and citations",
-    description: "Leverage fast AI insights that answer your questions and breaks down complex sections, along with seamless citation management to streamline your research process.",
-    icon: Cloud,
-    color: "bg-purple-500",
-  },
-]
+import { Laptop, Smartphone, Cloud } from "lucide-react"
 
 export default function BusinessCategories() {
+  const features = [
+    {
+      icon: "images/search.png",
+      title: "Search for seminal papers",
+      description: "Quickly discover seminal papers in your field, seamlessly integrated with Semantic Scholar to provide you with the most impactful research at your fingertips.",
+    },
+    {
+      icon: "images/write.png",
+      title: "Use integrated tools as you read",
+      description: "Dot down questions, annotations and notes using our built-in editor, enhancing your quality of research and creating meaningful analysis of research articles",
+    },
+    {
+      icon: "images/cite.png",
+      title: "Smart assistant and citations",
+      description: "Leverage fast AI insights that answer your questions and breaks down complex sections, along with seamless citation management to streamline your research process.",
+    },
+    {
+      icon: "images/save.png",
+      title: "Build your research library",
+      description: "Save articles for later and organize them into a personalized library, creating a curated collection of research at your fingertips.",
+
+    }
+  ]
+
   return (
-    <section className="py-12 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-12">
-          Our Features
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature) => (
-            <Card 
-              key={feature.title} 
-              className="transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl"
-            >
-              <CardContent className="p-6">
-                <div className={`w-12 h-12 ${feature.color} rounded-full flex items-center justify-center mb-4`}>
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                {/* <Badge variant="secondary" className="mb-4">
-                  Featured
-                </Badge> */}
-                <p className="text-gray-600">{feature.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+    <div className="container mx-auto px-4 py-16">
+      <h2 className="text-3xl font-bold text-center mb-12">Transform the way you research</h2>
+      <div className="space-y-16">
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className={`flex flex-col md:flex-row items-center ${
+              index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+            }`}
+          >
+            <div className="w-full md:w-1/2 flex justify-center items-center py-8 md:py-0">
+              <img src={feature.icon} className="h-64 text-primary"  />
+            </div>
+            <div className="w-full md:w-1/2 mt-4 md:mt-0 text-center md:text-left px-4">
+              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+              <p className="text-muted-foreground">{feature.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   )
 }
