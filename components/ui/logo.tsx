@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Logo() {
   return (
     <Link href="/" className="inline-flex" aria-label="Cruip">
-      
+      <img src="images/logo.png" className="h-6"></img>
       {/* <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28">
         <path
           className="fill-blue-500"
