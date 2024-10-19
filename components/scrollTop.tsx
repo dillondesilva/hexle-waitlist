@@ -6,11 +6,11 @@ import { ChevronUp } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export default function ScrollToTop() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      if (window.scrollY > 100) {
         setIsVisible(true)
       } else {
         setIsVisible(false)
@@ -38,15 +38,16 @@ export default function ScrollToTop() {
           animate={{ opacity: 1, bottom: 20 }}
           exit={{ opacity: 0, bottom: -100 }}
           transition={{ duration: 0.3 }}
-          className="fixed right-4 z-50"
+          className="justify-center z-50 pt-4 pb-4"
           style={{ bottom: '20px' }}
         >
           <Button
             onClick={scrollToTop}
-            className="rounded-full w-12 h-12 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg"
+            className="rounded-2xl h-12 bg-[#9C6DFF] text-primary-foreground hover:bg-[#9C6DFF]/90 shadow-lg text-white"
             aria-label="Scroll to top"
           >
-            <ChevronUp className="h-6 w-6" />
+            Go to Waitlist
+            <ChevronUp className="ml-2 h-6 w-6" />
           </Button>
         </motion.div>
       )}
