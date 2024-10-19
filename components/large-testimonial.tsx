@@ -6,7 +6,9 @@ import ScrollToTop from "./scrollTop";
 export default function LargeTestimonial() {
   return (
     <section>
-      <div className="mx-auto max-w-2xl px-4 sm:px-6">
+      <div className="mx-auto max-w-2xl px-4 sm:px-6"
+       data-aos="zoom-y-out"
+       data-aos-delay={150}>
         <div className="py-12 md:py-20">
           <div className="space-y-3 text-center transition-opacity ease-in duration-1200 opacity-100">
             <h1 className="text-3xl font-bold">We are a dedicated, small team based in Sydney, Australia</h1>

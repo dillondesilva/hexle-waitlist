@@ -29,7 +29,9 @@ export default function BusinessCategories() {
 
   return (
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-12">Transform the way you research</h2>
+      <h2 className="text-3xl font-bold text-center mb-12"
+      data-aos="zoom-y-out"
+      data-aos-delay={150}>Transform the way you research</h2>
       <div className="space-y-16">
         {features.map((feature, index) => (
           <div
@@ -37,6 +39,8 @@ export default function BusinessCategories() {
             className={`flex flex-col md:flex-row items-center ${
               index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
             }`}
+            data-aos="zoom-y-out"
+            data-aos-delay={150}
           >
             <div className="w-full md:w-1/2 flex justify-center items-center py-8 md:py-0">
               <video src={feature.icon} className="h-64 text-primary rounded-2xl shadow-2xl" autoPlay muted loop playsInline/>
@@ -53,6 +57,8 @@ export default function BusinessCategories() {
             className={`flex flex-col md:flex-row items-center ${
               index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
             }`}
+            data-aos="zoom-y-out"
+            data-aos-delay={150}
           >
             <div className="w-full md:w-1/2 flex justify-center items-center py-8 md:py-0">
               <img src={feature.icon} className="h-64 text-primary"/>

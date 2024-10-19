@@ -39,7 +39,9 @@ export default function Waitlist() {
   }
 
   return (
-    <div className="max-w-lg mx-auto px-4 py-8">
+    <div className="max-w-lg mx-auto px-4 py-8"
+    data-aos="zoom-y-out"
+    data-aos-delay={150}>
       <h1 className="font-bold text-2xl text-center">Want to try it out when it is ready?</h1>
       <div className="min-h-[100px] flex items-center justify-center">
         <AnimatePresence mode="wait">
