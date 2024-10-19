@@ -13,10 +13,10 @@ export default function Header() {
 
           {/* Desktop sign in links */}
           <ul className="flex flex-1 items-center justify-end gap-3 animate-pulse">
-            <li>
-              Join our waitlist!
+            {/* <li>
+              Join our waitlist! */}
               {/* <strong>We are launching soon - sign up for our waitlist to be the first to try!</strong> */}
-            </li>
+            {/* </li> */}
             {/* <li>
               <Link
                 href="/signin"
