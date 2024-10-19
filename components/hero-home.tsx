@@ -9,7 +9,7 @@ export default function HeroHome() {
       <PageIllustration />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Hero content */}
-        <div className="pb-4 pt-32 md:pt-40">
+        <div className=" pt-32 md:pt-40">
           {/* Section header */}
           <div className="pb-12 text-center md:pb-16">
            
@@ -32,7 +32,6 @@ export default function HeroHome() {
               </p>
               <Waitlist />
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.violet.400/.8),transparent)1]">
-               
               </div>
             </div>
           </div>
