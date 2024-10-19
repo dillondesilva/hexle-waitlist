@@ -39,7 +39,7 @@ export default function BusinessCategories() {
             }`}
           >
             <div className="w-full md:w-1/2 flex justify-center items-center py-8 md:py-0">
-              <video src={feature.icon} className="h-64 text-primary rounded-2xl shadow-2xl" autoPlay muted loop/>
+              <video src={feature.icon} className="h-64 text-primary rounded-2xl shadow-2xl" autoPlay muted loop playsInline/>
             </div>
             <div className="w-full md:w-1/2 mt-4 md:mt-0 text-center md:text-left px-4">
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
